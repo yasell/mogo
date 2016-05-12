@@ -1,0 +1,133 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 200;
+
+  body.menu-open & {
+    background: $intro-bg;
+  }
+
+  @media (min-width: $desktop) {
+    body.menu-open & {
+      background: none;
+    }
+  }
+}
+
+.page-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  @include container;
+}
+
+.page-header__logo {
+  z-index: 200;
+  margin: 0;
+  font: bold 30px "Montserrat", "Arial", sans-serif;
+  text-decoration: none;
+  color: white;
+  &:hover, &:active {
+    opacity: .5;
+  }
+}
+
+// trigger
+.page-header__trigger {
+  position: absolute;
+  top: 19px;
+  right: 5%;
+  z-index: 200;
+  width: 50px;
+  height: 25px;
+  color: transparent;
+  cursor: pointer;
+  @media (min-width: $tablet) {
+    top: 45px;
+  }
+  @media (min-width: $desktop) {
+    display: none;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0, 12px);
+  }
+}
+
+.page-header__trigger-decor {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transform: translate(0, 6px);
+  transition: all 0.3s ease-in-out;
+
+  body.menu-open & {
+    background: white;
+    opacity: 0;
+    transform: rotate(180deg);
+    transform: translate(100%, 0);
+  }
+}
+
+.menu-open .page-header__trigger {
+  &:before {
+    width: 23px;
+    background: white;
+    transform: translate(30px, 10px) rotate(45deg);
+  }
+
+  &:after {
+    width: 23px;
+    background: white;
+    transform: translate(30px, 2px) rotate(-45deg);
+  }
+}
+
+.page-header__trigger {
+  &:hover {
+    &:before,
+    &:after,
+    .page-header__trigger-decor {
+      background-color: $gray-main;
+    }
+  }
+
+  &:active {
+     &:before,
+    &:after,
+    .page-header__trigger-decor {
+      opacity: 0.3;
+    }
+  }
+}
+
+.without-js .page-header {
+  background: $intro-bg;
+  @media (min-width: $desktop) {
+    background: none;
+  }
+}
+
+.without-js .page-header__trigger {
+  display: none;
+}
