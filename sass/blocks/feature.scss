@@ -1,0 +1,17 @@
+.feature {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  background: url("../img/feature-bg.jpg") 50% 50% no-repeat gray;
+  background-size: cover;
+}
+
+.feature__img-wrapper {
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  margin-left: -25%;
+  width: 635px;
+  height: 670px;
+  background: url("../img/feature-device.png") 50% 50% no-repeat;
+}

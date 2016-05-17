@@ -19,14 +19,7 @@ dl, dt, dd {
   padding: 0;
 }
 
-h1 {
-  span {
-    display: block;
-  }
-}
-
-h2 {
-  span {
-    display: block;
-  }
+h1, h2 {
+  display: block;
+  margin: 0;
 }

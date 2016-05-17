@@ -371,11 +371,9 @@ dl, dt, dd {
   margin: 0;
   padding: 0; }
 
-h1 span {
-  display: block; }
-
-h2 span {
-  display: block; }
+h1, h2 {
+  display: block;
+  margin: 0; }
 
 .page-header {
   position: absolute;
@@ -493,6 +491,9 @@ h2 span {
   border-top: 1px solid black;
   box-shadow: inset 0 1px 2px 0 #485461;
   background: #e88482; }
+  .main-nav__item:nth-child(n+6) .main-nav__link {
+    font-size: 0;
+    background-image: url(../img/); }
 
 .main-nav__item:last-child {
   border-bottom: 1px solid black; }
@@ -527,7 +528,8 @@ h2 span {
 .banner {
   padding-top: 100px;
   min-height: 1000px;
-  background-image: linear-gradient(to bottom, #e98583, #f0d48a); }
+  background: url("../img/headerbg.jpg") 50% 50% no-repeat, linear-gradient(to bottom, #e98583, #f0d48a);
+  background-size: cover; }
 
 .banner__inner {
   width: 280px;
@@ -539,21 +541,40 @@ h2 span {
   align-items: center; }
 
 .banner__title {
-  display: block;
   margin: auto;
+  font: bold 150px/140px "Montserrat", "Arial", sans-serif;
   text-align: center;
+  text-transform: uppercase;
   color: white; }
+  .banner__title span {
+    display: block; }
+  .banner__title span:first-child {
+    font: normal 72px "Kaushan Script", "Arial", cursive;
+    text-transform: none; }
 
 .banner__btn {
+  position: relative;
   display: block;
   width: 160px;
   height: 40px;
   margin: 0 auto;
-  padding: 5px 25px;
+  padding: 8px 25px;
+  font: normal 14px "Montserrat", "Arial", sans-serif;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   border: 3px solid white;
   color: white; }
+  .banner__btn:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -30px;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: white; }
 
 .banner__slider {
   width: 100%;
@@ -572,9 +593,177 @@ h2 span {
   border-top: 3px solid white; }
 
 .banner__link {
+  font: normal 18px "Montserrat", "Arial", sans-serif;
   text-align: left;
   text-decoration: none;
+  text-transform: uppercase;
   color: white; }
+  .banner__link span {
+    font-weight: bold;
+    font-size: 24px; }
+
+.block-title {
+  position: relative;
+  margin: 0 auto 80px auto;
+  padding: 100px 0 0 0;
+  font: bold 30px "Montserrat", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: black; }
+  .block-title span {
+    display: block; }
+  .block-title span:first-child {
+    font: normal 24px "Kaushan Script", "Arial", cursive;
+    text-transform: none; }
+  .block-title:after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    margin-left: -30px;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181; }
+
+.about__inner {
+  width: 280px;
+  margin: 0 auto; }
+
+.about__intro {
+  display: block;
+  max-width: 965px;
+  margin: 0 auto;
+  text-align: center; }
+
+.about__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 100px 0 100px 0;
+  list-style: none; }
+
+.about__item {
+  display: block;
+  width: 380px; }
+  .about__item:not(:last-child) {
+    margin: 0 30px 0 0; }
+
+.about__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  font-size: 0; }
+  .about__link img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%); }
+
+.about__showing {
+  width: 100%;
+  background-color: #95e1d3; }
+
+.about__showing-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.about__showing-item {
+  display: block;
+  width: 240px;
+  min-height: 100%;
+  padding: 85px 60px 85px 60px;
+  text-align: center;
+  border-left: 1px solid white; }
+  .about__showing-item:last-child {
+    border-right: 1px solid white; }
+
+.about__showing-number {
+  display: block;
+  font: bold 72px "Montserrat", "Arial", sans-serif;
+  color: white; }
+
+.about__showing-content {
+  font: normal 14px "Montserrat", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: white; }
+
+.services__inner {
+  position: relative;
+  width: 280px;
+  margin: 0 auto; }
+
+.services__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 0 100px 0;
+  list-style: none; }
+  .services__list:before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #999999; }
+
+.services__item {
+  position: relative;
+  display: block;
+  width: 365px; }
+  .services__item:not(:nth-child(3n)) {
+    margin: 0 50px 50px 0; }
+  .services__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: olive; }
+  .services__item:first-child:before {
+    content: url(../img/); }
+
+.services__item-content {
+  padding-left: 90px;
+  text-align: left; }
+
+.services__item-title {
+  margin-bottom: 10px;
+  font: normal 14px "Montserrat", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: black; }
+
+.services__item-description {
+  font: normal 15px/24px "Roboto", "Arial", sans-serif; }
+
+.feature {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  background: url("../img/feature-bg.jpg") 50% 50% no-repeat gray;
+  background-size: cover; }
+
+.feature__img-wrapper {
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  margin-left: -25%;
+  width: 635px;
+  height: 670px;
+  background: url("../img/feature-device.png") 50% 50% no-repeat; }
 
 @media (min-width: 660px) {
   .page-header__inner {
@@ -584,6 +773,10 @@ h2 span {
   .main-nav__list {
     padding: 110px 0 0; }
   .banner__inner {
+    width: 620px; }
+  .about__inner {
+    width: 620px; }
+  .services__inner {
     width: 620px; } }
 
 @media (min-width: 1200px) {
@@ -618,6 +811,10 @@ h2 span {
   .main-nav__link:active:after {
     display: none; }
   .banner__inner {
+    width: 1200px; }
+  .about__inner {
+    width: 1200px; }
+  .services__inner {
     width: 1200px; } }
 
 @media (max-width: 1200px) {
