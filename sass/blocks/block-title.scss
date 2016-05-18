@@ -2,7 +2,7 @@
   position: relative;
   margin: 0 auto 80px auto;
   padding: 100px 0 0 0;
-  font: bold 30px "Montserrat", "Arial", sans-serif;
+  font: bold 30px $font-title;
   text-align: center;
   text-transform: uppercase;
   color: black;
@@ -10,7 +10,7 @@
     display: block;
   }
   span:first-child {
-    font: normal 24px "Kaushan Script", "Arial", cursive;
+    font: normal 24px $title-cursive;
     text-transform: none;
   }
   &:after {

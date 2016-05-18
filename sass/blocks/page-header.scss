@@ -28,7 +28,7 @@
 .page-header__logo {
   z-index: 200;
   margin: 0;
-  font: bold 30px "Montserrat", "Arial", sans-serif;
+  font: bold 30px $font-title;
   text-decoration: none;
   color: white;
   &:hover, &:active {

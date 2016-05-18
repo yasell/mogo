@@ -1,8 +1,15 @@
-.banner {
+.banner__wrapper {
+  width: 100%;
+  min-height: 1000px;
+  background: url("../img/header-bg.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.banner__gradient {
   padding-top: 100px;
   min-height: 1000px;
-  background: url("../img/headerbg.jpg") 50% 50% no-repeat, linear-gradient(to bottom, #e98583, #f0d48a);
-  background-size: cover;
+  background: linear-gradient(to bottom, #e98583, #f0d48a);
+  opacity: .9;
 }
 
 .banner__inner {
@@ -25,7 +32,7 @@
     display: block;
   }
   span:first-child {
-    font: normal 72px "Kaushan Script", "Arial", cursive;
+    font: normal 72px $title-cursive;
     text-transform: none;
   }
 }

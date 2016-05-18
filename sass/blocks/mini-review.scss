@@ -1,0 +1,98 @@
+.mini-review {
+  width: 100%;
+  background-color: $gray-light;
+}
+
+.mini-review__inner {
+  position: relative;
+  @include container;
+}
+
+// slider btn
+.mini-review__nav {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  &:hover {
+    border-color: $green-light;
+  }
+  &:active {
+    border-color: $green-light;
+  }
+}
+
+.mini-review__nav--prev {
+  top: 50%;
+  left: 25px;
+  border-bottom: 3px solid $gray-main;
+  border-left: 3px solid $gray-main;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.mini-review__nav--next {
+  top: 50%;
+  right: 25px;
+  border-top: 3px solid $gray-main;
+  border-right: 3px solid $gray-main;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+// review
+.mini-review__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mini-review__item {
+  position: relative;
+  padding: 110px 65px 110px 320px;
+  &:not(:first-child) {
+    display: none;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url("../img/");
+    border: 3px solid $green-light;
+  }
+}
+
+.mini-review__item-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+.mini-review__author {
+  position: relative;
+  padding: 0 0 0 70px;
+  font: normal 24px "Kaushan Script", "Arial", cursive;
+  color: black;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $title;
+  }
+}
+
+.mini-review__content {
+  padding: 0 0 10px 0;
+  font: 200 24px/36px "Roboto", "Arial", sans-serif;
+  font-style: italic;
+}

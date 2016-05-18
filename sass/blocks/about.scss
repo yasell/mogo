@@ -1,6 +1,4 @@
-.about {
-
-}
+.about {}
 
 .about__inner {
   @include container;
@@ -8,8 +6,8 @@
 
 .about__intro {
   display: block;
-  max-width: 965px;
   margin: 0 auto;
+  padding: 0 120px;
   text-align: center;
 }
 
@@ -48,7 +46,7 @@
 
 .about__showing {
   width: 100%;
-  background-color: $facts-row;
+  background-color: $green-light;
 }
 
 .about__showing-list {
@@ -74,7 +72,8 @@
 
 .about__showing-number {
   display: block;
-  font: bold 72px "Montserrat", "Arial", sans-serif;
+  font: bold 30px $font-title;
+  font-size: 72px;
   color: white;
 }
 
