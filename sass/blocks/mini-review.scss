@@ -1,6 +1,9 @@
 .mini-review {
   width: 100%;
   background-color: $gray-light;
+  &--foto {
+    background-color: white;
+  }
 }
 
 .mini-review__inner {
@@ -13,8 +16,8 @@
   content: "";
   position: absolute;
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   &:hover {
     border-color: $green-light;
@@ -66,6 +69,20 @@
     background: url("../img/");
     border: 3px solid $green-light;
   }
+  &--foto {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 110px;
+      left: 110px;
+      display: block;
+      width: 150px;
+      height: 150px;
+      background: url("../img/people/review-img.png") center;
+      border-radius: 50%;
+      border: none;
+    }
+  }
 }
 
 .mini-review__item-inner {
@@ -77,7 +94,7 @@
 .mini-review__author {
   position: relative;
   padding: 0 0 0 70px;
-  font: normal 24px "Kaushan Script", "Arial", cursive;
+  font: normal 24px $title-cursive;
   color: black;
   &:before {
     content: "";
@@ -93,6 +110,6 @@
 
 .mini-review__content {
   padding: 0 0 10px 0;
-  font: 200 24px/36px "Roboto", "Arial", sans-serif;
+  font: 200 24px/36px $roboto;
   font-style: italic;
 }

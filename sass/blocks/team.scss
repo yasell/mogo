@@ -100,8 +100,43 @@
   }
 }
 
-.team__logo-wrapper {}
+// logos row
+.team__logo-wrapper {
+  width: 100%;
+  background-color: $gray-light;
+}
 
-.team__logo-list {}
+.team__logo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 70px 10px;
+  list-style: none;
+}
 
-.team__logo-item {}
+.team__logo-item {
+  display: block;
+  width: 130px;
+  height: 130px;
+  background-image: url(../img/logos-sprite.png);
+  background-repeat: no-repeat;
+  &--1 {
+    background-position: 0 0;
+  }
+  &--2 {
+    background-position: -210px 0;
+  }
+  &--3 {
+    background-position: -410px 0;
+  }
+  &--4 {
+    background-position: -634px 0;
+  }
+  &--5 {
+    background-position: -840px 0;
+  }
+  &--6 {
+    background-position: -1060px 0;
+  }
+}

@@ -1,0 +1,53 @@
+.works {
+
+}
+
+.works__inner {
+  @include container;
+}
+
+.works__intro {
+  margin: 0;
+  padding: 0 120px;
+  text-align: center;
+}
+
+.works__gallery {
+  width: 100%;
+}
+
+.works__foto-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 100px 0;
+  list-style: none;
+}
+
+.works__foto-item {
+  display: block;
+  width: 25%;
+  height: 390px;
+  background-color: olive;
+  &:nth-child(3) {
+    height: 720px;
+  }
+}
+
+.works__foto-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+  }
+}
